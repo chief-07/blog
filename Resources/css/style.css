@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  background-color: rgb(61, 61, 61);
+  font-family: agency fb;
+}
+nav {
+  background: rgba(23, 22, 22, 0.99);
+  width: 100vw;
+  height: auto;
+  position: fixed;
+  z-index: 11;
+  padding: 0 0 0 2rem;
+  box-shadow: 0 0 2rem 0;
+  border-bottom: 2px solid #009dff;
+  margin-top: -10rem;
+}
+.follow {
+  width: auto;
+  border: 1px solid white;
+  padding: 1rem;
+  transition: 400ms ease;
+  margin: 12px;
+}
+.follow:hover {
+  border: 1px solid white;
+  color: black;
+  background-color: white;
+}
+.nav_container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav_menu {
+  display: flex;
+  align-items: center;
+}
+nav img {
+  height: 7rem;
+  background: none;
+}
+ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  padding-right: 20px;
+  flex-wrap: wrap;
+}
+li a {
+  color: white;
+  display: inline-block;
+  padding: 2.7rem 1.5rem 2.7rem 1.5rem;
+  text-align: center;
+}
+li a:hover {
+  border-bottom: 3px solid white;
+}
+hr {
+  display: none;
+}
+.div {
+  font-weight: bolder;
+  font-size: 3rem;
+  color: #009dff;
+}
+h4 {
+  margin: 10px 10px 0 10px;
+  color: white;
+  text-shadow: 2px 2px rgb(21, 0, 128);
+  font-size: 1.5rem;
+  font-style: italic;
+}
+.newsfeed {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 10rem;
+}
+.headline {
+  height: 100vh;
+}
+.morestories {
+  padding: 1rem;
+  margin-top: 2rem;
+  height: 60vh;
+  background-color: #2a2929;
+}
+.moregist {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 2rem;
+  height: 40vh;
+  background-color: #2a2929;
+}
+footer {
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
+  background: rgba(23, 22, 22, 0.99);
+  border-top: 4px solid #009dff;
+  color: white;
+  text-align: center;
+  height: 20vh;
+}
+footer .fake {
+  margin-right: 15rem;
+}
+footer p {
+  display: inline;
+  font-weight: bolder;
+}
+footer a {
+  color: #009dff;
+}
+footer a:hover {
+  background: transparent;
+}
+.head {
+  position: relative;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.725);
+  width: 50vw;
+  height: 90vh;
+}
+.headphoto {
+  width: 40vw;
+  display: block;
+  margin: 2vh auto;
+}
+.head p {
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+  background-color: rgba(0, 0, 0, 0.763);
+  color: white;
+  padding: 4rem;
+  font-size: 20px;
+  margin-top: -170px;
+  border-radius: 5px;
+  z-index: 1;
+  height: 10rem;
+  display: none;
+}
+.head:hover p {
+  display: block;
+  transition: 400ms ease;
+}
+.topstory {
+  background-color: rgb(42, 41, 41);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 1rem;
+  justify-content: space-between;
+  overflow-y: scroll;
+}
+.topstory h2 {
+  color: white;
+  margin: 0 auto;
+  width: max-content;
+  border-bottom: 2px solid white;
+  padding: 1rem;
+}
+.head h2 {
+  color: white;
+  margin: 0 auto;
+  width: max-content;
+  border-bottom: 2px solid white;
+  padding: 1rem;
+}
+.story {
+  height: 50vh;
+  width: 20vw;
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.723);
+  border-radius: 5px;
+  position: relative;
+}
+.story img {
+  padding: 0.5rem;
+  display: block;
+  margin: 0 auto;
+  height: 30vh;
+  width: 15vw;
+}
+.story p {
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  background-color: rgba(0, 0, 0, 0.403);
+  color: white;
+  padding: 1rem;
+  font-size: 15px;
+  margin-top: -70px;
+  border-radius: 5px;
+  z-index: 1;
+  height: 5rem;
+  display: none;
+}
+.story:hover p {
+  display: block;
+}
+
+.more {
+  box-sizing: border-box;
+  height: 30vh;
+  width: 40vw;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.723);
+  border-radius: 5px;
+}
+.more img {
+  padding: 0.5rem;
+  display: block;
+  margin: 0 auto;
+  height: 30vh;
+  width: 15vw;
+}
+.more p {
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  background-color: rgba(0, 0, 0, 0.403);
+  color: white;
+  padding: 1rem;
+  font-size: 15px;
+  margin-top: -70px;
+  border-radius: 5px;
+  z-index: 1;
+  height: 5rem;
+  display: none;
+}
+.more:hover p {
+  display: block;
+}
+.morestories h2 {
+  color: white;
+  margin: 0 auto;
+  width: max-content;
+  border-bottom: 2px solid white;
+  padding: 1rem;
+}
