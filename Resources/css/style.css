@@ -1,3 +1,4 @@
+/* resetting defaults */
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +11,17 @@
   box-sizing: inherit;
 }
 body {
+  text-align: center;
   background-color: rgb(61, 61, 61);
   font-family: agency fb;
 }
+
+/* .. */
+
+/* navbar starts here */
 nav {
   background: rgba(23, 22, 22, 0.99);
-  width: 100vw;
+  width: 100%;
   height: auto;
   position: fixed;
   z-index: 11;
@@ -59,7 +65,8 @@ ul {
 li a {
   color: white;
   display: inline-block;
-  padding: 2.7rem 1.5rem 2.7rem 1.5rem;
+  padding: 2rem;
+  padding-bottom: 0.5rem;
   text-align: center;
 }
 li a:hover {
@@ -80,52 +87,21 @@ h4 {
   font-size: 1.5rem;
   font-style: italic;
 }
+/* end of navbar */
+
+/* beginning of main page */
 .newsfeed {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  margin-top: 10rem;
-}
-.headline {
-  height: 100vh;
-}
-.morestories {
-  padding: 1rem;
-  margin-top: 2rem;
-  height: 60vh;
-  background-color: #2a2929;
-}
-.moregist {
-  padding: 1rem;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  margin-top: 2rem;
-  height: 40vh;
-  background-color: #2a2929;
-}
-footer {
-  display: flex;
-  flex-direction: center;
-  align-items: center;
-  justify-content: center;
-  background: rgba(23, 22, 22, 0.99);
-  border-top: 4px solid #009dff;
-  color: white;
   text-align: center;
-  height: 20vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10rem;
+  justify-content: center;
+  gap: 12rem;
 }
-footer .fake {
-  margin-right: 15rem;
-}
-footer p {
-  display: inline;
-  font-weight: bolder;
-}
-footer a {
-  color: #009dff;
-}
-footer a:hover {
-  background: transparent;
+/* styling for the headline */
+
+.headline {
+  height: 48rem;
 }
 .head {
   position: relative;
@@ -134,11 +110,19 @@ footer a:hover {
   margin: 0 auto;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.725);
-  width: 50vw;
-  height: 90vh;
+  width: max-content;
+  height: fit content;
+  padding: 2rem;
+}
+.head h2 {
+  color: white;
+  margin: 0 auto;
+  width: max-content;
+  border-bottom: 2px solid white;
+  padding: 1rem;
 }
 .headphoto {
-  width: 40vw;
+  width: 30rem;
   display: block;
   margin: 2vh auto;
 }
@@ -154,19 +138,25 @@ footer a:hover {
   z-index: 1;
   height: 10rem;
   display: none;
+  width: 30rem;
 }
+
 .head:hover p {
   display: block;
   transition: 400ms ease;
 }
+/* end of headline */
+
+/* styling for the topstory section */
 .topstory {
   background-color: rgb(42, 41, 41);
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 50rem;
   gap: 1rem;
   justify-content: space-between;
   overflow-y: scroll;
+  width: 25rem;
 }
 .topstory h2 {
   color: white;
@@ -175,16 +165,10 @@ footer a:hover {
   border-bottom: 2px solid white;
   padding: 1rem;
 }
-.head h2 {
-  color: white;
-  margin: 0 auto;
-  width: max-content;
-  border-bottom: 2px solid white;
-  padding: 1rem;
-}
+
 .story {
-  height: 50vh;
-  width: 20vw;
+  height: 20rem;
+  width: 20rem;
   display: block;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.723);
@@ -195,8 +179,8 @@ footer a:hover {
   padding: 0.5rem;
   display: block;
   margin: 0 auto;
-  height: 30vh;
-  width: 15vw;
+  height: 15rem;
+  width: 15rem;
 }
 .story p {
   -webkit-backdrop-filter: blur(50px);
@@ -209,26 +193,56 @@ footer a:hover {
   border-radius: 5px;
   z-index: 1;
   height: 5rem;
+  width: 100%;
   display: none;
 }
 .story:hover p {
   display: block;
 }
+/* end of topstory section */
+
+/* styling for morestories section */
+.morestories {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 1rem;
+  margin-top: 2rem;
+  height: 25rem;
+  width: 100%;
+  background-color: #2a2929;
+}
+.morestories h2 {
+  color: white;
+  margin: 0 auto;
+  width: max-content;
+  border-bottom: 2px solid white;
+  padding: 1rem;
+}
+.moregist {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 2rem;
+  height: 20rem;
+  background: transparent;
+}
 
 .more {
   box-sizing: border-box;
-  height: 30vh;
-  width: 40vw;
+  height: 13rem;
+  width: 25rem;
   display: block;
   background-color: rgba(0, 0, 0, 0.723);
   border-radius: 5px;
+  padding: 1rem;
 }
 .more img {
   padding: 0.5rem;
   display: block;
   margin: 0 auto;
-  height: 30vh;
-  width: 15vw;
+  height: 11rem;
+  width: 15rem;
 }
 .more p {
   -webkit-backdrop-filter: blur(50px);
@@ -246,10 +260,89 @@ footer a:hover {
 .more:hover p {
   display: block;
 }
-.morestories h2 {
+
+/* end of morestories section */
+
+/* beginnig of footer section */
+footer {
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
+  background: rgba(23, 22, 22, 0.99);
+  border-top: 4px solid #009dff;
   color: white;
-  margin: 0 auto;
-  width: max-content;
-  border-bottom: 2px solid white;
-  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  height: 20vh;
+  margin-top: 1rem;
 }
+footer .fake {
+  margin-right: 15rem;
+}
+footer p {
+  display: inline;
+  font-weight: bolder;
+}
+footer a {
+  color: #009dff;
+}
+footer a:hover {
+  background: transparent;
+}
+
+/* end of footer section */
+
+/* styling for resposivity (media queries) */
+@media (max-width: 426px) {
+  li {
+    height: 4.5rem;
+  }
+  .topstory {
+    display: none;
+  }
+  nav {
+    background: rgba(23, 22, 22, 0.99);
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: 11;
+    padding: 0 0 0 2rem;
+    box-shadow: 0 0 2rem 0;
+    border-bottom: 2px solid #009dff;
+    margin-top: -10rem;
+  }
+  .morestories {
+    width: 40rem;
+  }
+  .newsfeed {
+    padding-left: 20rem;
+    padding-right: 20rem;
+    gap: 1rem;
+    padding-top: 10rem;
+  }
+  footer {
+    width: 40rem;
+  }
+  .head p {
+    display: block;
+  }
+  .morestories p {
+    display: block;
+  }
+}
+@media (max-width: 769px) {
+  .morestories p {
+    display: block;
+  }
+  .head p {
+    display: block;
+  }
+  .topstory p {
+    display: block;
+  }
+  .newsfeed {
+    padding-top: 5rem;
+  }
+}
+/* end of media queries */
